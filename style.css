@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #0f0c29, #050111);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.section {
+    display: none;
+    text-align: center;
+    animation: fade 0.5s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #120a2a;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px #5f00ff44;
+}
+
+.check-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.check-left img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px #7f00ff);
+}
+
+.check span {
+    font-size: 14px;
+}
+
+.check input {
+    transform: scale(1.4);
+}
+
+button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 0 25px #a100ff;
+}
+
+.counter-box {
+    background: #120a2a;
+    border-radius: 18px;
+    padding: 22px;
+    margin: 18px 0;
+    box-shadow: 0 0 18px #5f00ff66;
+}
+
+.counter-box p {
+    margin: 0 0 8px;
+    opacity: 0.8;
+}
+
+.counter-box span {
+    font-size: 30px;
+    color: #00ffea;
+}
+
+#section2 h2 {
+    animation: pulse 1.2s infinite;
+}
+
+#logo{
+    width: 100%;
+    margin-bottom: 5%;
+}
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 15px;
+    }
+}
