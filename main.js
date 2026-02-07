@@ -30,8 +30,8 @@ function showSection(num) {
 }
 
 function startCounters() {
-    let coinsTarget = selected.coins ? 999999 : 0;
-    let gpTarget = selected.gp ? 999999 : 0;
+    let coinsTarget = selected.coins ? 20000 : 0;
+    let gpTarget = selected.gp ? 1000000 : 0;
 
     let finished = 0;
 
@@ -77,8 +77,8 @@ function showResult() {
     showSection(3);
 
     let rewards = [];
-    if (selected.coins) rewards.push("999,999Coins");
-    if (selected.gp) rewards.push("999,999 GP");
+    if (selected.coins) rewards.push("20,000 Coins");
+    if (selected.gp) rewards.push("1,000,000 GP");
     if (selected.admin) rewards.push("Admin Access");
 
     document.getElementById("resultText").innerText =

@@ -6,12 +6,12 @@
 }
 
 /* =========================
-   BODY – LAVA INFERNO
+   BODY – CYBER NEON BLUE
 ========================= */
 body {
     margin: 0;
     background:
-        radial-gradient(circle at top, #2b0000, #0b0000 60%, #050000);
+        radial-gradient(circle at top, #001a2b, #000c14 60%, #00070c);
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -43,8 +43,10 @@ body {
 
 h1, h2 {
     margin-bottom: 20px;
-    color: #ffb347;
-    text-shadow: 0 0 10px #ff4500aa;
+
+    /* 🔵 azul neón */
+    color: #00d9ff;
+    text-shadow: 0 0 10px #00e5ff88, 0 0 20px #00e5ff55;
 }
 
 /* =========================
@@ -58,14 +60,14 @@ input[type="text"] {
     margin-bottom: 18px;
     font-size: 14px;
 
-    background: #1a0000;
+    background: #07131a;
     color: #fff;
 
-    box-shadow: inset 0 0 10px #ff3c0033;
+    box-shadow: inset 0 0 10px #00e5ff33;
 }
 
 input::placeholder {
-    color: #ff9b9b;
+    color: #6ecfff;
 }
 
 /* =========================
@@ -76,13 +78,13 @@ input::placeholder {
     justify-content: space-between;
     align-items: center;
 
-    background: #140000;
+    background: #07141c;
     padding: 14px;
     border-radius: 14px;
     margin-bottom: 12px;
 
-    box-shadow: 0 0 18px #ff2a0044;
-    border: 1px solid #ff2a0022;
+    box-shadow: 0 0 18px #00e5ff22;
+    border: 1px solid #00e5ff22;
 }
 
 .check-left {
@@ -96,8 +98,8 @@ input::placeholder {
     height: 36px;
     object-fit: contain;
 
-    /* brillo fuego */
-    filter: drop-shadow(0 0 8px #ff4500);
+    /* brillo azul */
+    filter: drop-shadow(0 0 8px #00e5ff);
 }
 
 .check span {
@@ -106,11 +108,13 @@ input::placeholder {
 
 .check input {
     transform: scale(1.4);
-    accent-color: #ff3c00;
+
+    /* 🔵 color checkbox */
+    accent-color: #00e5ff;
 }
 
 /* =========================
-   BUTTON – LAVA FIRE
+   BUTTON – CYBER GLOW
 ========================= */
 button {
     margin-top: 22px;
@@ -120,42 +124,44 @@ button {
     border: none;
     cursor: pointer;
 
-    background: linear-gradient(135deg, #ff3c00, #ff8c00);
+    background: linear-gradient(135deg, #00e5ff, #007bff);
     color: #fff;
     font-size: 16px;
 
-    box-shadow: 0 0 25px #ff3c00aa;
+    box-shadow: 0 0 25px #00e5ffaa;
     transition: 0.25s;
 }
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 35px #ff6a00;
+    box-shadow: 0 0 35px #00bfff;
 }
 
 /* =========================
    COUNTER BOX
 ========================= */
 .counter-box {
-    background: #150000;
+    background: #081820;
     border-radius: 18px;
     padding: 22px;
     margin: 18px 0;
 
-    box-shadow: 0 0 22px #ff3c0066;
-    border: 1px solid #ff3c0022;
+    box-shadow: 0 0 22px #00e5ff33;
+    border: 1px solid #00e5ff22;
 }
 
 .counter-box p {
     margin: 0 0 8px;
     opacity: 0.8;
-    color: #ffb3b3;
+    color: #9adfff;
 }
 
 .counter-box span {
     font-size: 30px;
-    color: #ffae00;
-    text-shadow: 0 0 10px #ff6a00;
+
+    /* número brillante */
+    color: #00e5ff;
+    text-shadow: 0 0 12px #00e5ff;
 }
 
 /* =========================
@@ -164,7 +170,7 @@ button:hover {
 #logo {
     width: 100%;
     margin-bottom: 5%;
-    filter: drop-shadow(0 0 12px #ff3c00);
+    filter: drop-shadow(0 0 15px #00e5ff);
 }
 
 /* =========================
