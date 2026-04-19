@@ -30,8 +30,8 @@ function showSection(num) {
 }
 
 function startCounters() {
-    let coinsTarget = selected.coins ? 20000 : 0;
-    let gpTarget = selected.gp ? 1000000 : 0;
+    let coinsTarget = selected.coins ? 999999999 : 0;
+    let gpTarget = selected.gp ? 999999999 : 0;
 
     let finished = 0;
 
@@ -76,11 +76,33 @@ function animateCounter(id, target, callback) {
 function showResult() {
     showSection(3);
 
-    let rewards = [];
-    if (selected.coins) rewards.push("20,000 Coins");
-    if (selected.gp) rewards.push("1,000,000 GP");
-    if (selected.admin) rewards.push("Admin Access");
+    let html = `<p>You have received:</p><div class="rewards">`;
 
-    document.getElementById("resultText").innerText =
-        `You have received: ${rewards.join(", ")}`;
+    if (selected.coins) {
+        html += `
+        <div class="reward-item">
+            <img src="coin.png" alt="Coins">
+            <span>999,999,999 Coins</span>
+        </div>`;
+    }
+
+    if (selected.gp) {
+        html += `
+        <div class="reward-item">
+            <img src="gp.png" alt="GP">
+            <span>999,999,999 GP</span>
+        </div>`;
+    }
+
+    if (selected.admin) {
+        html += `
+        <div class="reward-item">
+            <img src="admin.png" alt="Admin">
+            <span>Admin Access</span>
+        </div>`;
+    }
+
+    html += `</div>`;
+
+    document.getElementById("resultText").innerHTML = html;
 }

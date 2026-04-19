@@ -6,17 +6,20 @@
 }
 
 /* =========================
-   BODY – CYBER NEON PURPLE
+   BODY – CENTRADO PERFECTO
 ========================= */
 body {
     margin: 0;
-    background:
-        radial-gradient(circle at top, #14001f, #090012 60%, #050008);
+    background: radial-gradient(circle at top, #14001f, #090012 60%, #050008);
     color: #fff;
-    min-height: 100vh;
+
+    min-height: 100dvh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 10px;
 }
 
 /* =========================
@@ -41,7 +44,7 @@ body {
     display: block;
 }
 
-/* 🔮 TITULOS NEON PURPLE */
+/* 🔮 TITULOS */
 h1, h2 {
     margin-bottom: 20px;
     color: #ff2dfb;
@@ -99,7 +102,6 @@ input::placeholder {
     width: 36px;
     height: 36px;
     object-fit: contain;
-
     filter: drop-shadow(0 0 10px #ff2dfb);
 }
 
@@ -113,7 +115,7 @@ input::placeholder {
 }
 
 /* =========================
-   BUTTON – NEON GRADIENT
+   BUTTON
 ========================= */
 button {
     margin-top: 22px;
@@ -171,6 +173,36 @@ button:hover {
 }
 
 /* =========================
+   RESULTADOS
+========================= */
+.rewards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.reward-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.reward-item span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* =========================
    ANIMATIONS
 ========================= */
 #section2 h2 {
@@ -189,10 +221,93 @@ button:hover {
 }
 
 /* =========================
-   MOBILE
+   MOBILE (<=480px)
 ========================= */
 @media (max-width: 480px) {
+
     .app {
-        padding: 15px;
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"] {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .check {
+        padding: 12px;
+    }
+
+    .check-left img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .check span {
+        font-size: 13px;
+    }
+
+    .check input {
+        transform: scale(1.2);
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .counter-box {
+        padding: 16px;
+        margin: 14px 0;
+    }
+
+    .counter-box span {
+        font-size: 24px;
+    }
+
+    .reward-item img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .reward-item span {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   EXTRA SMALL (<=360px)
+========================= */
+@media (max-width: 360px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .check {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .check input {
+        align-self: flex-end;
+    }
+
+    .reward-item {
+        flex-direction: column;
+        text-align: center;
     }
 }
